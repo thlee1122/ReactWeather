@@ -1,6 +1,6 @@
 var axios = require('axios');
 
-const OPEN_WEATHER_MAP_URL = 'http://api.openweathermap.org/data/2.5/weather?appid=9e92125c33a14c85c7cdf3e6fa92c164&units=imperial';
+const OPEN_WEATHER_MAP_URL = 'http://api.openweathermap.org/data/2.5/weather?appid=c4e735ea8bd7e7b6dc8368c752517b2d&units=imperial';
 
 module.exports = {
   getTemp: function (location) {
@@ -13,8 +13,8 @@ module.exports = {
       } else {
         return res.data.main.temp;
       }
-    }, function (res) {
-      throw new Error(res.data.message);
+    }, function (err) {
+      throw new Error('Unable to fetch weather for that location.');
     });
   }
 }
