@@ -5,8 +5,70 @@ $title-color: #555;
 	color: $title-color;
 	margin-top: $space-large;
 	margin-bottom: $space-large;
+	font-size: 80px;
 }
 
 input[type=search] {
 	box-shadow: none;
+	text-align: center;
+	width: 500px;
+	margin-left: -60px;
 }
+
+input.upperSearch {
+	box-shadow: none;
+	text-align: center;
+	width: 250px;
+}
+
+.button.hollow {
+	width: 500px;
+	margin-left: -60px;
+}
+
+.button.hollow:hover {
+	background-color: #00BFFF;
+}
+
+.text-center {
+	text-align: center;
+	width: 500px;
+	margin-left: -60px;
+}
+
+h1.text-center.page-title {
+	width: 1000px;
+	margin-left: -310px;
+}
+
+@media screen and (min-width: 40em) {
+	.reveal.tiny {
+	width: 30%;
+	max-width: 75rem;
+	margin-left: 510px;
+	margin-top: 125px;
+	}
+}
+
+p.p-center {
+	font-size: 25px;
+	width: 750px;
+	margin-left: -120px;
+}
+
+ol.ol-center {
+	font-size: 25px;
+	width: 750px;
+	margin-left: -90px;
+}
+
+p.p-center.last-p {
+	padding-top: 15px;
+	font-weight: 500;
+}
+
+
+
+
+
+
