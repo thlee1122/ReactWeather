@@ -19,7 +19,8 @@ var Weather = React.createClass({
       errorMessage: undefined, 
       location: undefined,
       temp: undefined,
-      weather: undefined
+      weather: undefined,
+      forecast: undefined
     });
 
     openWeatherMap.getTemp(location).then(function (temp) {
@@ -47,6 +48,19 @@ var Weather = React.createClass({
         errorMessage: e.message
       });
     });
+
+    // openWeatherMap.getForecast(location).then(function (forecast) {
+    //   that.setState({
+    //     location: location,
+    //     forecast: forecast,
+    //     isLoading: false
+    //   });
+    // }, function(e) {
+    //   that.setState({
+    //     isLoading: false,
+    //     errorMessage: e.message
+    //   });
+    // });
   },
 
   componentDidMount: function() {
