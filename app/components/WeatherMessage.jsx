@@ -10,11 +10,11 @@ var React = require('react');
 //   }
 // });
 
-var WeatherMessage = ({temp, location}) => {
+var WeatherMessage = ({temp, location, weather}) => {
 	// var {temp, location} = props;
 
     return (
-      <h3 className="text-center">Currently, it is {temp} ˚F in {location}.</h3>
+      <h3 className="text-center">Current weather condition is <strong>{weather}</strong> and it is <strong>{temp} ˚F</strong> in <strong>{location}.</strong></h3>
     )
 }
 
