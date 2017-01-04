@@ -16,17 +16,14 @@ var WeatherMessage = ({temp, location, weather, forecast}) => {
     return (
     	<div>
         	<h3 className="text-center">Current weather condition is <strong>{weather}</strong> and it is <strong>{temp} ˚F</strong> in <strong>{location}.</strong></h3>
+        	<p className="p-center">
+        		7 Days weather forecasts for <strong>{location}</strong>.
+        	</p>
+        	<ol className="ol-center">
+        		<li>Day 1: {forecast}</li>
+        	</ol>
         </div>
     )
 }
 
 module.exports = WeatherMessage;
-
-
-//7 day forecast part
-// <p className="p-center">
-//         		7 Days weather forecasts for <strong>{location}</strong>.
-//         	</p>
-//         	<ol className="ol-center">
-//         		<li>Day 1: {forecast}</li>
-//         	</ol>

@@ -49,18 +49,18 @@ var Weather = React.createClass({
       });
     });
 
-    // openWeatherMap.getForecast(location).then(function (forecast) {
-    //   that.setState({
-    //     location: location,
-    //     forecast: forecast,
-    //     isLoading: false
-    //   });
-    // }, function(e) {
-    //   that.setState({
-    //     isLoading: false,
-    //     errorMessage: e.message
-    //   });
-    // });
+    openWeatherMap.getForecast(location).then(function (forecast) {
+      that.setState({
+        location: location,
+        forecast: forecast,
+        isLoading: false
+      });
+    }, function(e) {
+      that.setState({
+        isLoading: false,
+        errorMessage: e.message
+      });
+    });
   },
 
   componentDidMount: function() {

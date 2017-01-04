@@ -34,20 +34,20 @@ module.exports = {
       throw new Error('Unable to fetch weather for that location.')
     })
   },
+  
+  //7 Days forecast Data (Day 1 for now)
+  getForecast: function(location) {
+    var encodedLocation = encodeURIComponent(location);
+    var requestUrl = `${OPEN_WEATHER_MAP_URL_FORECAST}&q=${encodedLocation}`;
 
-  //7 Day Forecast Part
-  // getForecast: function(location) {
-  //   var encodedLocation = encodeURIComponent(location);
-  //   var requestUrl = `${OPEN_WEATHER_MAP_URL_FORECAST}&q=${encodedLocation}`;
-
-  //   return axios.get(requestUrl).then(function (res) {
-  //     if(res.data.cod && res.data.message) {
-  //       throw new Error(res.data.message);
-  //     } else {
-  //       return res.data.list[0].weather.main;
-  //     }
-  //   }, function(err) {
-  //     throw new Error('Unable to fetch weather for that location.')
-  //   })
-  // },
+    return axios.get(requestUrl).then(function (res) {
+      if(res.data.cod && res.data.message) {
+        throw new Error(res.data.message);
+      } else {
+        return res.data.list[0].weather.main;
+      }
+    }, function(err) {
+      throw new Error('Unable to fetch weather for that location.')
+    })
+  }
 }
